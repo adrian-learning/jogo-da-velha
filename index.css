@@ -1,14 +1,17 @@
-.d-flex{
+ body {
+    height: 100vh;
+    width: 100vw;
+    background-position: cover;
+    background: rgb(38,32,128);
+    background: linear-gradient(90deg, rgba(38,32,128,1) 0%, rgba(130,156,199,1) 100%); 
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-.row {
-    border: 1px solid green;
-    
-}
-.container {
-    border: 1px solid blue;
-    
+
+.d-flex{
+    align-items: center;
+    justify-content: center;
 }
 
 .square {
@@ -29,3 +32,9 @@
     -webkit-text-fill-color: transparent;
     cursor: pointer;
 }
+
+.card {
+    background-color: rgba(255, 255, 255, 0.603);
+    backdrop-filter: blur(33px);
+}
+

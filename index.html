@@ -19,66 +19,83 @@
 
 <body>
   
-  
+    
 
     <!-- Introduction -->
     <div class="container py-2 text-center">
       <div class="row justify-content-center">
-        <h1>Jogo da velha</h1>
-      </div>
-      <!-- Selecionar peça -->
-      <div id="messages" class="row pt-3 justify-content-center ">
-        Quem começa jogando?
-      </div>
-      <div class="row">
-        <div class="col justify-content-center">
-          <button name="startButton" type="button" 
-                  class="btn btn-outline-primary"
-                  onclick="iniciar('x')">
-            <span class=" material-icons-outlined icons">
-              close
-            </span>
-          </button>
+    
+        <div class="col col-md-8 col-lg-6 card">
 
-          <button name="startButton" type="button" 
-                  class="btn btn-outline-primary"
-                  onclick="iniciar('o')">
-            <span class="material-icons-outlined icons">
-              circle
-            </span>
-          </button>
-        </div>
+          <div class="row justify-content-center card-body">
         
+            <div class="col">
+              <h1>Jogo da velha</h1>
+            </div>
+            
+          </div>
+          <!-- Selecionar peça -->
+          <div id="messages" class="row py-3 justify-content-center card-body">
+            <div class="col ">
+              Quem começa jogando?
+            </div>  
+          </div>
+    
+          <div class="row">
+            <div class="col  justify-content-center">
+              <button name="startButton" type="button" 
+                      class="btn btn-outline-primary"
+                      onclick="iniciar('x')">
+                <span class=" material-icons-outlined icons">
+                  close
+                </span>
+              </button>
+    
+              <button name="startButton" type="button" 
+                      class="btn btn-outline-primary"
+                      onclick="iniciar('o')">
+                <span class="material-icons-outlined icons">
+                  circle
+                </span>
+              </button>
+            </div>
+            
+          </div>
+    
+          <!-- Board -->
+          <div id="boardArea" class="card-body">
+            <div id="board" hidden="true" class="container py-3">
+              <div class="row justify-content-center ">
+                <div id="1" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+                <div id="2" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+                <div id="3" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+              </div>
+              <div class="row justify-content-center">
+                <div id="4" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+                <div id="5" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+                <div id="6" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+              </div>
+              <div class="row justify-content-center">
+                <div id="7" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+                <div id="8" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+                <div id="9" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
+              </div>
+            </div>
+    
+            <div class="container">
+              <div id="restartBtn" hidden="true" onclick="restartGame()" class="row justify-content-center">
+                <span class="material-icons-outlined restart">
+                  restart_alt
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
       </div>
 
-      <!-- Board -->
-      <div id="boardArea">
-        <div id="board" hidden="true" class="container py-3">
-          <div class="row justify-content-center ">
-            <div id="1" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-            <div id="2" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-            <div id="3" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-          </div>
-          <div class="row justify-content-center">
-            <div id="4" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-            <div id="5" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-            <div id="6" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-          </div>
-          <div class="row justify-content-center">
-            <div id="7" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-            <div id="8" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-            <div id="9" name="boardBox" class="d-flex  square" onclick="playit(this.id)"></div>
-          </div>
-        </div>
-
-        <div class="container">
-          <div id="restartBtn" hidden="true" onclick="restartGame()" class="row justify-content-center">
-            <span class="material-icons-outlined restart">
-              restart_alt
-            </span>
-          </div>
-        </div>
-      </div>
+      
 
     </div>
 </body>
