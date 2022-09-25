@@ -78,7 +78,8 @@ class Jogo{
         
     }
 
-    endGame() {
+    async endGame() {
+        await this.delay(300)
         this.hiddenBoard(true)
         this.clearBoxes()
         
@@ -88,17 +89,23 @@ class Jogo{
         document.getElementById('restartBtn').hidden = false
     }
 
+
     restartGame(){
         this.p1_arr = []
         this.p2_arr = []
         this.turn = []
 
         document.getElementsByName('boardBox').forEach(box => box.onclick = () => playit(box.id))
+
       
 
         document.getElementById('restartBtn').hidden = true
         document.getElementById('messages').innerHTML = 'Quem começa jogando?'
         this.hiddenButtons(false)
+    }
+
+    async delay(time){
+        return new Promise((resolve, reject) => setTimeout(() => resolve(),time))
     }
 }
 
