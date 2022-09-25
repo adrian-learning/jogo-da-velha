@@ -1,0 +1,31 @@
+.d-flex{
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    border: 1px solid green;
+    
+}
+.container {
+    border: 1px solid blue;
+    
+}
+
+.square {
+    border: 3px solid gray;
+    width: 100px;
+    height: 100px;
+}
+
+.icons {
+    font-size: 60px;
+}
+
+.restart {
+    font-size: 160px;
+    background: rgb(83,77,177);
+    background: linear-gradient(90deg, rgba(83,77,177,1) 0%, rgba(150,86,255,1) 36%, rgba(0,212,255,1) 78%); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
